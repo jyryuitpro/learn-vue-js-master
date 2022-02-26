@@ -22,6 +22,7 @@
       template: '<button v-on:click="passEvent">click me</button>',
       methods: {
         passEvent: function() {
+          // 이벤트 이름
           this.$emit('pass');
         }
       }
@@ -35,7 +36,7 @@
       }
     }
 
-    // 인스턴스 생성
+    // 인스턴스 생성 (Root)
     var vm = new Vue({
       el: '#app',
       components: {
