@@ -9,6 +9,7 @@
 <body>
   <div id="app">
     <div>
+      <!-- router-link는 최종적으로 화면에 a-tag로 변환되서 나타납니다. -->
       <router-link to="/login">Login</router-link>
       <router-link to="/main">Main</router-link>
     </div>
@@ -30,13 +31,14 @@
 
     // functional : router 내부적으로 사용하고 있는 componant
     var router = new VueRouter({
+      mode: 'history',
       // 페이지의 라우팅 정보
       routes: [
         // 로그인 페이지 정보
         {
           // 페이지의 url
           path: '/login',
-          // name: 'login',
+          name: 'login',
           // 해당 url에서 표시될 컴포넌트
           component: LoginComponent
         },
@@ -52,6 +54,9 @@
       el: '#app',
       // VueRouter를 Vue 인스턴스에 동작(주입)을 시킵니다.
       router: router,
+      components: {
+
+      }
     });
   </script>
 </body>
