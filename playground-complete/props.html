@@ -9,6 +9,7 @@
 <body>
   <div id="app">
     <!-- <app-header v-bind:프롭스 속성 이름="상위 컴포넌트의 데이터 이름"></app-header> -->
+    <!-- app-header의 상위 컴포넌트는 Root   -->
     <app-header v-bind:propsdata="message"></app-header>
     <app-content v-bind:propsdata="num"></app-content>
   </div>
@@ -17,6 +18,7 @@
   <script>
     var appHeader = {
       template: '<h1>{{ propsdata }}</h1>',
+      // 프롭스 속성 이름
       props: ['propsdata']
     }
     var appContent = {
@@ -24,6 +26,8 @@
       props: ['propsdata']
     }
 
+    // 인스턴스 생성
+    // Root 컴포넌트
     new Vue({
       el: '#app',
       components: {
