@@ -12,6 +12,7 @@
       <router-link to="/login">Login</router-link>
       <router-link to="/main">Main</router-link>
     </div>
+    <!-- 페이지의 url에 따라서 해당 component가 보여지는 영역 -->
     <router-view></router-view>
   </div>
 
@@ -27,6 +28,7 @@
       template: '<div>main</div>'
     }
 
+    // functional : router 내부적으로 사용하고 있는 componant
     var router = new VueRouter({
       // 페이지의 라우팅 정보
       routes: [
