@@ -48,6 +48,7 @@
           console.log('hi');
         },
         increaseNumber: function() {
+          // this.num은 data의 num속성을 가르킵니다.
           this.num = this.num + 1;
         }
       },
@@ -55,6 +56,28 @@
         num: 10
       }
     });
+
+    // this 개념
+    var obj = {
+      num: 10,
+      getNumber: function () {
+        // 객체 속성에서 다른 속성을 가르킬 때, this를 사용하면 this는 Object를 바라보게 됩니다. 즉, 해당 객체를 바라보게 됩니다.
+        console.log(this.num);
+      }
+    }
+
+    // 뷰 인스턴스에서의 this
+    var Vue2 = {
+      el: '',
+      data: {
+        num: 10,
+      },
+      methods: {
+        getNumber: function () {
+          this.num
+        }
+      },
+    }
   </script>
 </body>
 </html>
