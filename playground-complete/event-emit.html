@@ -9,6 +9,8 @@
 <body>
   <div id="app">
     <p>{{ num }}</p>
+    <!-- app-header의 상위 컴포넌트는 Root -->
+    <!-- <Root> -->
     <!-- <app-header v-on:하위 컴포넌트에서 발생한 이벤트 이름="상위 컴포넌트의 메서드 이름"></app-header> -->
     <app-header v-on:pass="logText"></app-header>
     <app-content v-on:increase="increaseNumber"></app-content>
@@ -33,6 +35,7 @@
       }
     }
 
+    // 인스턴스 생성
     var vm = new Vue({
       el: '#app',
       components: {
