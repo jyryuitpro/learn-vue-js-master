@@ -26,6 +26,23 @@
 
       }
     });
+
+    function Person(name, job) {
+      this.name = name;
+      this.job = job;
+    }
+
+    var p = new Person('josh', 'developer');
+    console.log(p);
+
+    function Vue() {
+      this.logText = function () {
+        console.log('hello');
+      }
+    }
+
+    var vue = new Vue();
+    vue.logText();
   </script>
 </body>
 </html>
