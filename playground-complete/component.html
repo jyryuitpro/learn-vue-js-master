@@ -9,7 +9,7 @@
 <body>
   <div id="app">
     <app-header></app-header>
-    <app-content></app-content>
+<!--    <app-content></app-content>-->
     <app-footer></app-footer>
   </div>
 
@@ -23,19 +23,21 @@
     // 전역 컴포넌트
     // 컴포넌트 등록 방법
     // Vue.component('컴포넌트 이름', 컴포넌트 내용);
+    // 인스턴스 생성 시, 기본적으로 등록이 되어있습니다.
     Vue.component('app-header', {
       template: '<h1>Header</h1>'
     });  
 
-    Vue.component('app-content', {
-      template: '<div>Content</div>'
-    });
+    // Vue.component('app-content', {
+    //   template: '<div>Content</div>'
+    // });
 
     // new Vue() 인스턴스를 생성해서 el 해당 태그에 붙입니다.
     // 인스턴스를 생성하면 기본적으로 Root 컴포넌트가 됩니다.
     new Vue({
       el: '#app',
       // 지역 컴포넌트 등록 방식 (객체 리터럴)
+      // 인스턴스마다 새로 생성을 해주어야 합니다.
       components: {
         // '컴포넌트 이름': 컴포넌트 내용,
         'app-footer': {
