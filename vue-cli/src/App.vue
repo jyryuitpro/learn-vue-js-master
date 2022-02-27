@@ -1,5 +1,7 @@
 <template>
+  <!-- The template root requires exactly one element. -->
   <div id="app">
+    {{ str }}
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -8,11 +10,22 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
+// new Vue({
+//   data: {
+//     str: 'hi'
+//   }
+// })
+
 export default {
   name: 'App',
   components: {
     HelloWorld,
     // 'hello-world': HelloWorld,
+  },
+  data: function() {
+    return {
+      str: 'hi'
+    }
   }
 }
 </script>
