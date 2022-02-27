@@ -12,12 +12,14 @@
     <p v-bind:id="uuid" v-bind:class="name">{{ num }}</p>
     <!-- <p id="abc1234">{{ num }}</p> -->
     <p>{{ doubleNum }}</p>
+    <!-- DOM 제거 -->
     <div v-if="loading">
       Loading...
     </div>
     <div v-else>
       test user has been logged in
     </div>
+    <!-- style="display: none;"-->
     <div v-show="loading">
       Loading...
     </div>
