@@ -13,6 +13,7 @@
 </head>
 <body>
   <div id="app">
+    <p v-bind:class="{ warning: isError }">Hello</p>
     <p v-bind:class="errorTextColor">Hello</p>
   </div>
   
