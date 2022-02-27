@@ -18,11 +18,13 @@
       data: {
         num: 10
       },
+      // validation 또는 간단한 text연산
       computed: {
         doubleNum: function() {
           return this.num * 2;
         }
       },
+      // 데이터 요청과 같은 무거운 작 watch with methods
       watch: {
         num: function(newValue, oldValue) {
           this.fetchUserByNumber(newValue);
