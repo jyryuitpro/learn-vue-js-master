@@ -23,13 +23,21 @@
         users: []
       },
       methods: {
-        getData: function() { 
+        getData: function() {
+          // axios.get()을 호출하기 전, this(기본적인 인스턴스 또는 컴포넌트)와 호출하고 비동기처리에 의해서 들어오는 콜백함수의 this는 서로 다른 것을 바라보고 있습니다.
+          // 왜냐하면 비동기처리를 했을 때, 자연스럽게 실행 context가 바뀌면서 this에 대한 내용도 바뀝니다.
+          // console.log(this);
+          console.log(this);
+          // vm == vue model의 약어
           var vm = this;
           axios.get('https://jsonplaceholder.typicode.com/users/')
+            // 성공하면
             .then(function(response) {
+              console.log(this);
               console.log(response.data);
               vm.users = response.data;
             })
+            // 실패하면
             .catch(function(error) {
               console.log(error);
             });
