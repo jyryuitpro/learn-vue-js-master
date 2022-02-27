@@ -2,6 +2,7 @@
   <!-- The template root requires exactly one element. -->
   <div id="app">
     {{ str }}
+    <app-header></app-header>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -9,6 +10,11 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from "./components/AppHeader.vue";
+
+// var AppHeader = {
+//   template: '<header><h1>Header</h1></header>'
+// }
 
 // new Vue({
 //   data: {
@@ -21,6 +27,7 @@ export default {
   components: {
     HelloWorld,
     // 'hello-world': HelloWorld,
+    'app-header': AppHeader,
   },
   data: function() {
     return {
